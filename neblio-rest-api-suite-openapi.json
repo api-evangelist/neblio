@@ -1,0 +1,1611 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "Neblio REST API Suite",
+        "description": "APIs for Interacting with NTP1 Tokens & The Neblio Blockchain",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsntp1node.nebl.io\/",
+        "http:\/\/ntp1node.nebl.io\/"
+    ],
+    "paths": {
+        "\/ntp1\/tokenid\/{tokensymbol}": {
+            "get": {
+                "summary": "Returns the tokenId representing a token",
+                "description": "Translates a token symbol to a tokenId if a token exists with that symbol on the network\n",
+                "operationId": "GetTokenId",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tokensymbol",
+                        "in": "path",
+                        "description": "Token symbol"
+                    }
+                ]
+            }
+        },
+        "\/ntp1\/broadcast": {
+            "post": {
+                "summary": "Broadcasts a signed raw transaction to the network",
+                "description": "Broadcasts a signed raw transaction to the network. If successful returns the txid of the broadcast trasnaction.\n",
+                "operationId": "BroadcastTx",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Object representing a transaction to broadcast"
+                    }
+                ]
+            }
+        },
+        "\/ntp1\/addressinfo\/{address}": {
+            "get": {
+                "summary": "Information On a Neblio Address",
+                "description": "Returns both NEBL and NTP1 token UTXOs held at the given address.\n",
+                "operationId": "GetAddressInfo",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "path",
+                        "description": "Neblio Address to get information on."
+                    }
+                ]
+            }
+        },
+        "\/ntp1\/transactioninfo\/{txid}": {
+            "get": {
+                "summary": "Information On an NTP1 Transaction",
+                "description": "Returns detailed information regarding an NTP1 transaction.\n",
+                "operationId": "GetTransactionInfo",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "txid",
+                        "in": "path",
+                        "description": "Neblio txid to get information on."
+                    }
+                ]
+            }
+        },
+        "\/ntp1\/tokenmetadata\/{tokenid}": {
+            "get": {
+                "summary": "Get Issuance Metadata of Token",
+                "description": "Returns the metadata associated with a token at time of issuance.\n",
+                "operationId": "GetTokenMetadataOfIssuance",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tokenid",
+                        "in": "path",
+                        "description": "TokenId to request metadata for"
+                    }
+                ]
+            }
+        },
+        "\/ntp1\/tokenmetadata\/{tokenid}\/{utxo}": {
+            "get": {
+                "summary": "Get UTXO Metadata of Token",
+                "description": "Returns the metadata associated with a token for that specific utxo instead of the issuance transaction.\n",
+                "operationId": "GetTokenMetadataOfUtxo",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tokenid",
+                        "in": "path",
+                        "description": "TokenId to request metadata for"
+                    },
+                    {
+                        "name": "utxo",
+                        "in": "path",
+                        "description": "Specific UTXO to request metadata for"
+                    }
+                ]
+            }
+        },
+        "\/ntp1\/stakeholders\/{tokenid}": {
+            "get": {
+                "summary": "Get Addresses Holding a Token",
+                "description": "Returns the the the addresses holding a token and how many tokens are held\n",
+                "operationId": "GetTokenHolders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tokenid",
+                        "in": "path",
+                        "description": "TokenId to request metadata for"
+                    }
+                ]
+            }
+        },
+        "\/ntp1\/issue": {
+            "post": {
+                "summary": "Builds a transaction that issues a new NTP1 Token",
+                "description": "Builds an unsigned raw transaction that issues a new NTP1 token on the Neblio blockchain.\n",
+                "operationId": "IssueToken",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Object representing a transaction to broadcast"
+                    }
+                ]
+            }
+        },
+        "\/ntp1\/sendtoken": {
+            "post": {
+                "summary": "Builds a transaction that sends an NTP1 Token",
+                "description": "Builds an unsigned raw transaction that sends an NTP1 token on the Neblio blockchain.\n",
+                "operationId": "SendToken",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Object representing a transaction to broadcast"
+                    }
+                ]
+            }
+        },
+        "\/ntp1\/burntoken": {
+            "post": {
+                "summary": "Builds a transaction that burns an NTP1 Token",
+                "description": "Builds an unsigned raw transaction that burns an NTP1 token on the Neblio blockchain.\n",
+                "operationId": "BurnToken",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Object representing a transaction to broadcast"
+                    }
+                ]
+            }
+        },
+        "\/ins\/tx\/send": {
+            "post": {
+                "summary": "Broadcasts a signed raw transaction to the network (not NTP1 specific)",
+                "description": "Broadcasts a signed raw transaction to the network. If successful returns the txid of the broadcast trasnaction.\n",
+                "operationId": "SendTx",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Object representing a transaction to broadcast"
+                    }
+                ]
+            }
+        },
+        "\/ins\/block\/{blockhash}": {
+            "get": {
+                "summary": "Returns information regarding a Neblio block",
+                "description": "Returns blockchain data for a given block based upon the block hash",
+                "operationId": "GetBlock",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "blockhash",
+                        "in": "path",
+                        "description": "Block Hash"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Object containing address info",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/getAddressResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/ins\/block-index\/{blockindex}": {
+            "get": {
+                "summary": "Returns block hash of block",
+                "description": "Returns the block hash of a block at a given block index",
+                "operationId": "GetBlockIndex",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "blockindex",
+                        "in": "path",
+                        "description": "Block Index"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Object containing address info",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/getAddressResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/ins\/tx\/{txid}": {
+            "get": {
+                "summary": "Returns transaction object",
+                "description": "Returns NEBL transaction object representing a NEBL transaction",
+                "operationId": "GetTx",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "txid",
+                        "in": "path",
+                        "description": "Neblio txid to get information on."
+                    }
+                ]
+            }
+        },
+        "\/ins\/rawtx\/{txid}": {
+            "get": {
+                "summary": "Returns raw transaction hex",
+                "description": "Returns raw transaction hex representing a NEBL transaction",
+                "operationId": "GetRawTx",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "txid",
+                        "in": "path",
+                        "description": "Neblio txid to get information on."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Object containing address info",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/getAddressResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/ins\/addr\/{address}": {
+            "get": {
+                "summary": "Returns address object",
+                "description": "Returns NEBL address object containing information on a specific address",
+                "operationId": "GetAddress",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "path",
+                        "description": "Neblio Address to get information on."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Object containing address info",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/getAddressResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/ins\/addr\/{address}\/balance": {
+            "get": {
+                "summary": "Returns address balance in sats",
+                "description": "Returns NEBL address balance in satoshis",
+                "operationId": "GetAddressBalance",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "path",
+                        "description": "Neblio Address to get information on."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Object containing address info",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/getAddressResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/ins\/addr\/{address}\/unconfirmedBalance": {
+            "get": {
+                "summary": "Returns address unconfirmed balance in sats",
+                "description": "Returns NEBL address unconfirmed balance in satoshis",
+                "operationId": "GetAddressUnconfirmedBalance",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "path",
+                        "description": "Neblio Address to get information on."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Object containing address info",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/getAddressResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/ins\/addr\/{address}\/totalReceived": {
+            "get": {
+                "summary": "Returns total received by address in sats",
+                "description": "Returns total NEBL received by address in satoshis",
+                "operationId": "GetAddressTotalReceived",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "path",
+                        "description": "Neblio Address to get information on."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Object containing address info",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/getAddressResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/ins\/addr\/{address}\/utxo": {
+            "get": {
+                "summary": "Returns all UTXOs at a given address",
+                "description": "Returns information on each Unspent Transaction Output contained at an address",
+                "operationId": "GetAddressUtxos",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "path",
+                        "description": "Neblio Address to get information on."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Object containing address info",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/getAddressResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/ins\/addr\/{address}\/totalSent": {
+            "get": {
+                "summary": "Returns total sent by address in sats",
+                "description": "Returns total NEBL sent by address in satoshis",
+                "operationId": "GetAddressTotalSent",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "path",
+                        "description": "Neblio Address to get information on."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Object containing address info",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/getAddressResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/ins\/txs": {
+            "get": {
+                "summary": "Get transactions by block or address",
+                "description": "Returns all transactions by block or address",
+                "operationId": "GetTxs",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "query",
+                        "description": "Address"
+                    },
+                    {
+                        "name": "block",
+                        "in": "query",
+                        "description": "Block Hash"
+                    },
+                    {
+                        "name": "pageNum",
+                        "in": "query",
+                        "description": "Page number to display"
+                    }
+                ]
+            }
+        },
+        "\/ins\/sync": {
+            "get": {
+                "summary": "Get node sync status",
+                "description": "Returns information on the node's sync progress",
+                "operationId": "GetSync",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Object containing address info",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/getAddressResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/ins\/status": {
+            "get": {
+                "summary": "Utility API for calling several blockchain node functions",
+                "description": "Utility API for calling several blockchain node functions - getInfo, getDifficulty, getBestBlockHash, getLastBlockHash",
+                "operationId": "GetStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "Function to call, getInfo, getDifficulty, getBestBlockHash, or getLastBlockHash"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Object containing address info",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/getAddressResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "\/testnet\/ins\/tx\/send": {
+            "post": {
+                "summary": "Broadcasts a signed raw transaction to the network (not NTP1 specific)",
+                "description": "Broadcasts a signed raw transaction to the network. If successful returns the txid of the broadcast trasnaction.\n",
+                "operationId": "TestnetSendTx",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Object representing a transaction to broadcast"
+                    }
+                ]
+            }
+        },
+        "\/testnet\/ins\/block\/{blockhash}": {
+            "get": {
+                "summary": "Returns information regarding a Neblio block",
+                "description": "Returns blockchain data for a given block based upon the block hash",
+                "operationId": "TestnetGetBlock",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "blockhash",
+                        "in": "path",
+                        "description": "Block Hash"
+                    }
+                ]
+            }
+        },
+        "\/testnet\/ins\/block-index\/{blockindex}": {
+            "get": {
+                "summary": "Returns block hash of block",
+                "description": "Returns the block hash of a block at a given block index",
+                "operationId": "TestnetGetBlockIndex",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "blockindex",
+                        "in": "path",
+                        "description": "Block Index"
+                    }
+                ]
+            }
+        },
+        "\/testnet\/ins\/tx\/{txid}": {
+            "get": {
+                "summary": "Returns transaction object",
+                "description": "Returns NEBL transaction object representing a NEBL transaction",
+                "operationId": "TestnetGetTx",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "txid",
+                        "in": "path",
+                        "description": "Neblio txid to get information on."
+                    }
+                ]
+            }
+        },
+        "\/testnet\/ins\/rawtx\/{txid}": {
+            "get": {
+                "summary": "Returns raw transaction hex",
+                "description": "Returns raw transaction hex representing a NEBL transaction",
+                "operationId": "TestnetGetRawTx",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "txid",
+                        "in": "path",
+                        "description": "Neblio txid to get information on."
+                    }
+                ]
+            }
+        },
+        "\/testnet\/ins\/addr\/{address}": {
+            "get": {
+                "summary": "Returns address object",
+                "description": "Returns NEBL address object containing information on a specific address",
+                "operationId": "TestnetGetAddress",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "path",
+                        "description": "Neblio Address to get information on."
+                    }
+                ]
+            }
+        },
+        "\/testnet\/ins\/addr\/{address}\/balance": {
+            "get": {
+                "summary": "Returns address balance in sats",
+                "description": "Returns NEBL address balance in satoshis",
+                "operationId": "TestnetGetAddressBalance",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "path",
+                        "description": "Neblio Address to get information on."
+                    }
+                ]
+            }
+        },
+        "\/testnet\/ins\/addr\/{address}\/unconfirmedBalance": {
+            "get": {
+                "summary": "Returns address unconfirmed balance in sats",
+                "description": "Returns NEBL address unconfirmed balance in satoshis",
+                "operationId": "TestnetGetAddressUnconfirmedBalance",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "path",
+                        "description": "Neblio Address to get information on."
+                    }
+                ]
+            }
+        },
+        "\/testnet\/ins\/addr\/{address}\/totalReceived": {
+            "get": {
+                "summary": "Returns total received by address in sats",
+                "description": "Returns total NEBL received by address in satoshis",
+                "operationId": "TestnetGetAddressTotalReceived",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "path",
+                        "description": "Neblio Address to get information on."
+                    }
+                ]
+            }
+        },
+        "\/testnet\/ins\/addr\/{address}\/utxo": {
+            "get": {
+                "summary": "Returns all UTXOs at a given address",
+                "description": "Returns information on each Unspent Transaction Output contained at an address",
+                "operationId": "TestnetGetAddressUtxos",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "path",
+                        "description": "Neblio Address to get information on."
+                    }
+                ]
+            }
+        },
+        "\/testnet\/ins\/addr\/{address}\/totalSent": {
+            "get": {
+                "summary": "Returns total sent by address in sats",
+                "description": "Returns total NEBL sent by address in satoshis",
+                "operationId": "TestnetGetAddressTotalSent",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "path",
+                        "description": "Neblio Address to get information on."
+                    }
+                ]
+            }
+        },
+        "\/testnet\/ins\/txs": {
+            "get": {
+                "summary": "Get transactions by block or address",
+                "description": "Returns all transactions by block or address",
+                "operationId": "TestnetGetTxs",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "query",
+                        "description": "Address"
+                    },
+                    {
+                        "name": "block",
+                        "in": "query",
+                        "description": "Block Hash"
+                    },
+                    {
+                        "name": "pageNum",
+                        "in": "query",
+                        "description": "Page number to display"
+                    }
+                ]
+            }
+        },
+        "\/testnet\/ins\/sync": {
+            "get": {
+                "summary": "Get node sync status",
+                "description": "Returns information on the node's sync progress",
+                "operationId": "TestnetGetSync",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/testnet\/ins\/status": {
+            "get": {
+                "summary": "Utility API for calling several blockchain node functions",
+                "description": "Utility API for calling several blockchain node functions - getInfo, getDifficulty, getBestBlockHash, getLastBlockHash",
+                "operationId": "TestnetGetStatus",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "Function to call, getInfo, getDifficulty, getBestBlockHash, or getLastBlockHash"
+                    }
+                ]
+            }
+        },
+        "\/testnet\/ntp1\/tokenid\/{tokensymbol}": {
+            "get": {
+                "summary": "Returns the tokenId representing a token",
+                "description": "Translates a token symbol to a tokenId if a token exists with that symbol on the network\n",
+                "operationId": "TestnetGetTokenId",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tokensymbol",
+                        "in": "path",
+                        "description": "Token symbol"
+                    }
+                ]
+            }
+        },
+        "\/testnet\/ntp1\/broadcast": {
+            "post": {
+                "summary": "Broadcasts a signed raw transaction to the network",
+                "description": "Broadcasts a signed raw transaction to the network. If successful returns the txid of the broadcast trasnaction.\n",
+                "operationId": "TestnetBroadcastTx",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Object representing a transaction to broadcast"
+                    }
+                ]
+            }
+        },
+        "\/testnet\/ntp1\/addressinfo\/{address}": {
+            "get": {
+                "summary": "Information On a Neblio Address",
+                "description": "Returns both NEBL and NTP1 token UTXOs held at the given address.\n",
+                "operationId": "TestnetGetAddressInfo",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "path",
+                        "description": "Neblio Address to get information on."
+                    }
+                ]
+            }
+        },
+        "\/testnet\/ntp1\/transactioninfo\/{txid}": {
+            "get": {
+                "summary": "Information On an NTP1 Transaction",
+                "description": "Returns detailed information regarding an NTP1 transaction.\n",
+                "operationId": "TestnetGetTransactionInfo",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "txid",
+                        "in": "path",
+                        "description": "Neblio txid to get information on."
+                    }
+                ]
+            }
+        },
+        "\/testnet\/ntp1\/tokenmetadata\/{tokenid}": {
+            "get": {
+                "summary": "Get Issuance Metadata of Token",
+                "description": "Returns the metadata associated with a token at time of issuance.\n",
+                "operationId": "TestnetGetTokenMetadataOfIssuance",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tokenid",
+                        "in": "path",
+                        "description": "TokenId to request metadata for"
+                    }
+                ]
+            }
+        },
+        "\/testnet\/ntp1\/tokenmetadata\/{tokenid}\/{utxo}": {
+            "get": {
+                "summary": "Get UTXO Metadata of Token",
+                "description": "Returns the metadata associated with a token for that specific utxo instead of the issuance transaction.\n",
+                "operationId": "TestnetGetTokenMetadataOfUtxo",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tokenid",
+                        "in": "path",
+                        "description": "TokenId to request metadata for"
+                    },
+                    {
+                        "name": "utxo",
+                        "in": "path",
+                        "description": "Specific UTXO to request metadata for"
+                    }
+                ]
+            }
+        },
+        "\/testnet\/ntp1\/stakeholders\/{tokenid}": {
+            "get": {
+                "summary": "Get Addresses Holding a Token",
+                "description": "Returns the the the addresses holding a token and how many tokens are held\n",
+                "operationId": "TestnetGetTokenHolders",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "tokenid",
+                        "in": "path",
+                        "description": "TokenId to request metadata for"
+                    }
+                ]
+            }
+        },
+        "\/testnet\/ntp1\/issue": {
+            "post": {
+                "summary": "Builds a transaction that issues a new NTP1 Token",
+                "description": "Builds an unsigned raw transaction that issues a new NTP1 token on the Neblio blockchain.\n",
+                "operationId": "TestnetIssueToken",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Object representing a transaction to broadcast"
+                    }
+                ]
+            }
+        },
+        "\/testnet\/ntp1\/sendtoken": {
+            "post": {
+                "summary": "Builds a transaction that sends an NTP1 Token",
+                "description": "Builds an unsigned raw transaction that sends an NTP1 token on the Neblio blockchain.\n",
+                "operationId": "TestnetSendToken",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Object representing a transaction to broadcast"
+                    }
+                ]
+            }
+        },
+        "\/testnet\/ntp1\/burntoken": {
+            "post": {
+                "summary": "Builds a transaction that burns an NTP1 Token",
+                "description": "Builds an unsigned raw transaction that burns an NTP1 token on the Neblio blockchain.\n",
+                "operationId": "TestnetBurnToken",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Object representing a transaction to broadcast"
+                    }
+                ]
+            }
+        },
+        "\/testnet\/faucet": {
+            "get": {
+                "summary": "Withdraws testnet NEBL to the specified address",
+                "description": "Withdraw testnet NEBL to your Neblio Testnet address. By default amount is 1500000000 or 15 NEBL and has a max of 50 NEBL. Only 2 withdrawals allowed per 24 hour period.\n",
+                "operationId": "TestnetGetFaucet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "address",
+                        "in": "query",
+                        "description": "Address"
+                    },
+                    {
+                        "name": "amount",
+                        "in": "query",
+                        "description": "Amount of NEBL to withdrawal in satoshis"
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "getTokenIdResponse": {
+                "type": "object",
+                "properties": {
+                    "tokenId": {
+                        "description": "TokenId of the token",
+                        "type": "string"
+                    },
+                    "tokenName": {
+                        "description": "String representing the token Symbol",
+                        "type": "string"
+                    }
+                }
+            },
+            "broadcastTxRequest": {
+                "type": "object",
+                "properties": {
+                    "txHex": {
+                        "description": "Signed raw tx hex to broadcast",
+                        "type": "string"
+                    }
+                }
+            },
+            "broadcastTxResponse": {
+                "type": "object",
+                "properties": {
+                    "txid": {
+                        "description": "Txid of successfully broadcasted transaction",
+                        "type": "string"
+                    }
+                }
+            },
+            "getAddressInfoResponse": {
+                "type": "object",
+                "properties": {
+                    "address": {
+                        "description": "The Neblio Address",
+                        "type": "string"
+                    },
+                    "utxos": {
+                        "description": "Array of UTXOs held at this address.",
+                        "type": "array"
+                    }
+                }
+            },
+            "getTransactionInfoResponse": {
+                "type": "object",
+                "properties": {
+                    "hex": {
+                        "description": "Transaction in raw hex",
+                        "type": "string"
+                    },
+                    "txid": {
+                        "description": "Txid of successfully broadcasted transaction",
+                        "type": "string"
+                    },
+                    "version": {
+                        "description": "Block version",
+                        "type": "number"
+                    },
+                    "locktime": {
+                        "description": "Transaction locktime",
+                        "type": "number"
+                    },
+                    "vin": {
+                        "description": "Array of transaction inputs",
+                        "type": "array"
+                    },
+                    "vout": {
+                        "description": "Array of transaction outputs",
+                        "type": "array"
+                    },
+                    "blocktime": {
+                        "description": "Block time of this transaction",
+                        "type": "number"
+                    },
+                    "blockheight": {
+                        "description": "Block height of this transaction",
+                        "type": "number"
+                    },
+                    "totalsent": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "fee": {
+                        "description": "Fee in satoshi to include in the issuance transaction min 10000 (0.0001 NEBL)",
+                        "type": "number"
+                    },
+                    "blockhash": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "time": {
+                        "description": "Block time relative to epoch",
+                        "type": "number"
+                    },
+                    "confirmations": {
+                        "description": "Number of confirmations block has",
+                        "type": "number"
+                    },
+                    "blockHash": {
+                        "description": "Hash of the requested block",
+                        "type": "string"
+                    },
+                    "totalSent": {
+                        "description": "Total NEBL sent",
+                        "type": "number"
+                    }
+                }
+            },
+            "getTokenMetadataResponse": {
+                "type": "object",
+                "properties": {
+                    "tokenId": {
+                        "description": "TokenId of the token",
+                        "type": "string"
+                    },
+                    "divisibility": {
+                        "description": "Decimal places the token is divisible to",
+                        "type": "number"
+                    },
+                    "lockStatus": {
+                        "description": "Whether new issuances of this token are locked",
+                        "type": "boolean"
+                    },
+                    "aggregationPolicy": {
+                        "description": "Whether the tokesn are aggregatable",
+                        "type": "string"
+                    },
+                    "totalSupply": {
+                        "description": "Total number of tokens in supply",
+                        "type": "number"
+                    },
+                    "numOfHolders": {
+                        "description": "Total number of addresses this token is held at",
+                        "type": "number"
+                    },
+                    "numOfTransfers": {
+                        "description": "Total number of transactions of this token",
+                        "type": "number"
+                    },
+                    "numofIssuance": {
+                        "description": "Total number of times this token has been issued",
+                        "type": "number"
+                    },
+                    "numOfBurns": {
+                        "description": "Number of times tokens have been burned",
+                        "type": "number"
+                    },
+                    "firstBlock": {
+                        "description": "Block number token was issued in",
+                        "type": "number"
+                    },
+                    "issuanceTxid": {
+                        "description": "TXID the token was issued with",
+                        "type": "string"
+                    },
+                    "issueAddress": {
+                        "description": "Address that issued the tokens",
+                        "type": "string"
+                    },
+                    "metadataOfIssuance": {
+                        "description": "Metadata set at issuance",
+                        "type": "object"
+                    },
+                    "metadataOfUtxo": {
+                        "description": "Metadata set at issuance",
+                        "type": "object"
+                    }
+                }
+            },
+            "getTokenHoldersResponse": {
+                "type": "object",
+                "properties": {
+                    "tokenId": {
+                        "description": "TokenId of the token",
+                        "type": "string"
+                    },
+                    "holders": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "divibility": {
+                        "description": "How many decimal points the token is divisble to",
+                        "type": "number"
+                    },
+                    "lockStatus": {
+                        "description": "Whether new issuances of this token are locked",
+                        "type": "boolean"
+                    },
+                    "aggregationPolicy": {
+                        "description": "Whether the tokesn are aggregatable",
+                        "type": "string"
+                    },
+                    "someUtxo": {
+                        "description": "A UTXO of this token",
+                        "type": "string"
+                    }
+                }
+            },
+            "issueTokenRequest": {
+                "type": "object",
+                "properties": {
+                    "issueAddress": {
+                        "description": "Address that issued the tokens",
+                        "type": "string"
+                    },
+                    "amount": {
+                        "description": "Number of tokens to issue",
+                        "type": "number"
+                    },
+                    "divisibility": {
+                        "description": "Decimal places the token is divisible to",
+                        "type": "number"
+                    },
+                    "fee": {
+                        "description": "Fee in satoshi to include in the issuance transaction min 10000 (0.0001 NEBL)",
+                        "type": "number"
+                    },
+                    "reissuable": {
+                        "description": "whether the token should be reissuable",
+                        "type": "boolean"
+                    },
+                    "flags": {
+                        "description": "Object representing flags that potentialy modify this transaction",
+                        "type": "object"
+                    },
+                    "metadata": {
+                        "description": "Object representing all metadata at token issuance",
+                        "type": "object"
+                    }
+                }
+            },
+            "issueTokenResponse": {
+                "type": "object",
+                "properties": {
+                    "tokenId": {
+                        "description": "TokenId of the token",
+                        "type": "string"
+                    },
+                    "txHex": {
+                        "description": "Signed raw tx hex to broadcast",
+                        "type": "string"
+                    }
+                }
+            },
+            "sendTokenRequest": {
+                "type": "object",
+                "properties": {
+                    "fee": {
+                        "description": "Fee in satoshi to include in the issuance transaction min 10000 (0.0001 NEBL)",
+                        "type": "number"
+                    },
+                    "from": {
+                        "description": "Array of addresses to send the token from",
+                        "type": "array"
+                    },
+                    "sendutxo": {
+                        "description": "Array of UTXOs to send the token from",
+                        "type": "array"
+                    },
+                    "to": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "flags": {
+                        "description": "Object representing flags that potentialy modify this transaction",
+                        "type": "object"
+                    },
+                    "metadata": {
+                        "description": "Object representing all metadata at token issuance",
+                        "type": "object"
+                    }
+                }
+            },
+            "sendTokenResponse": {
+                "type": "object",
+                "properties": {
+                    "txHex": {
+                        "description": "Signed raw tx hex to broadcast",
+                        "type": "string"
+                    },
+                    "ntp1OutputIndexes": {
+                        "description": "Array of indexes transfering NTP1 tokens",
+                        "type": "array"
+                    },
+                    "multisigOutputs": {
+                        "description": "Array of indexes of multisig outputs",
+                        "type": "array"
+                    }
+                }
+            },
+            "burnTokenRequest": {
+                "type": "object",
+                "properties": {
+                    "fee": {
+                        "description": "Fee in satoshi to include in the issuance transaction min 10000 (0.0001 NEBL)",
+                        "type": "number"
+                    },
+                    "from": {
+                        "description": "Array of addresses to send the token from",
+                        "type": "array"
+                    },
+                    "transfer": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "burn": {
+                        "description": "Array of objects representing tokens to be burned",
+                        "type": "array"
+                    }
+                }
+            },
+            "burnTokenResponse": {
+                "type": "object",
+                "properties": {
+                    "txHex": {
+                        "description": "Signed raw tx hex to broadcast",
+                        "type": "string"
+                    },
+                    "ntp1OutputIndexes": {
+                        "description": "Array of indexes transfering NTP1 tokens",
+                        "type": "array"
+                    },
+                    "multisigOutputs": {
+                        "description": "Array of indexes of multisig outputs",
+                        "type": "array"
+                    }
+                }
+            },
+            "getFaucetResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "description": "Whether the withdrawal was successful",
+                        "type": "string"
+                    },
+                    "data": {
+                        "description": "",
+                        "type": "object"
+                    }
+                }
+            },
+            "sendTxRequest": {
+                "type": "object",
+                "properties": {
+                    "txHex": {
+                        "description": "Signed raw tx hex to broadcast",
+                        "type": "string"
+                    }
+                }
+            },
+            "getBlockResponse": {
+                "type": "object",
+                "properties": {
+                    "hash": {
+                        "description": "Block hash",
+                        "type": "string"
+                    },
+                    "confirmations": {
+                        "description": "Number of confirmations block has",
+                        "type": "number"
+                    },
+                    "size": {
+                        "description": "Block size in bytes",
+                        "type": "number"
+                    },
+                    "height": {
+                        "description": "Block height",
+                        "type": "number"
+                    },
+                    "version": {
+                        "description": "Block version",
+                        "type": "number"
+                    },
+                    "merkleroot": {
+                        "description": "Merkleroot of block",
+                        "type": "string"
+                    },
+                    "tx": {
+                        "description": "Array of tx ids in the block",
+                        "type": "array"
+                    },
+                    "time": {
+                        "description": "Block time relative to epoch",
+                        "type": "number"
+                    },
+                    "nonce": {
+                        "description": "Block nonce",
+                        "type": "number"
+                    },
+                    "bits": {
+                        "description": "Block bits",
+                        "type": "string"
+                    },
+                    "difficulty": {
+                        "description": "Block difficulty",
+                        "type": "number"
+                    },
+                    "previousblockhash": {
+                        "description": "Hash of the previous block on the chain",
+                        "type": "string"
+                    },
+                    "nextblockhash": {
+                        "description": "Hash of the next block on the chain",
+                        "type": "string"
+                    },
+                    "reward": {
+                        "description": "Number of NEBL awarded in this block",
+                        "type": "number"
+                    }
+                }
+            },
+            "getBlockIndexResponse": {
+                "type": "object",
+                "properties": {
+                    "blockhash": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "blockHash": {
+                        "description": "Hash of the requested block",
+                        "type": "string"
+                    }
+                }
+            },
+            "getTxResponse": {
+                "type": "object",
+                "properties": {
+                    "txid": {
+                        "description": "Txid of successfully broadcasted transaction",
+                        "type": "string"
+                    },
+                    "version": {
+                        "description": "Block version",
+                        "type": "number"
+                    },
+                    "locktime": {
+                        "description": "Transaction locktime",
+                        "type": "number"
+                    },
+                    "vin": {
+                        "description": "Array of transaction inputs",
+                        "type": "array"
+                    },
+                    "vout": {
+                        "description": "Array of transaction outputs",
+                        "type": "array"
+                    },
+                    "blocktime": {
+                        "description": "Block time of this transaction",
+                        "type": "number"
+                    },
+                    "blockheight": {
+                        "description": "Block height of this transaction",
+                        "type": "number"
+                    },
+                    "totalsent": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "fee": {
+                        "description": "Fee in satoshi to include in the issuance transaction min 10000 (0.0001 NEBL)",
+                        "type": "number"
+                    },
+                    "blockhash": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "time": {
+                        "description": "Block time relative to epoch",
+                        "type": "number"
+                    },
+                    "confirmations": {
+                        "description": "Number of confirmations block has",
+                        "type": "number"
+                    },
+                    "valueOut": {
+                        "description": "Total NEBL output in this transaction",
+                        "type": "number"
+                    },
+                    "valueIn": {
+                        "description": "Total NEBL input in this transaction",
+                        "type": "number"
+                    },
+                    "fees": {
+                        "description": "Total NEBL used in fees for this transaction",
+                        "type": "number"
+                    },
+                    "size": {
+                        "description": "Block size in bytes",
+                        "type": "number"
+                    },
+                    "blockHash": {
+                        "description": "Hash of the requested block",
+                        "type": "string"
+                    },
+                    "totalSent": {
+                        "description": "Total NEBL sent",
+                        "type": "number"
+                    }
+                }
+            },
+            "getRawTxResponse": {
+                "type": "object",
+                "properties": {
+                    "rawtx": {
+                        "description": "Raw hex representing the transaction",
+                        "type": "string"
+                    }
+                }
+            },
+            "getAddressResponse": {
+                "type": "object",
+                "properties": {
+                    "addrStr": {
+                        "description": "Address in string form",
+                        "type": "string"
+                    },
+                    "balance": {
+                        "description": "NEBL balance",
+                        "type": "number"
+                    },
+                    "balanceSat": {
+                        "description": "NEBL balance in satoshis",
+                        "type": "number"
+                    },
+                    "totalReceived": {
+                        "description": "Total NEBL received",
+                        "type": "number"
+                    },
+                    "totalReceivedSat": {
+                        "description": "Total NEBL received in satoshis",
+                        "type": "number"
+                    },
+                    "totalsent": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "totalSentSat": {
+                        "description": "Total NEBL sent satoshis",
+                        "type": "number"
+                    },
+                    "unconfirmedBalance": {
+                        "description": "Unconfirmed NEBL balance",
+                        "type": "number"
+                    },
+                    "unconfirmedBalanceSat": {
+                        "description": "Unconfirmed NEBL balance in satoshis",
+                        "type": "number"
+                    },
+                    "unconfirmedTxAppearances": {
+                        "description": "Number of unconfirmed transactions for this address",
+                        "type": "number"
+                    },
+                    "txAppearances": {
+                        "description": "Number of transactions for this address",
+                        "type": "number"
+                    },
+                    "transactions": {
+                        "description": "Array of transaction ids for this address",
+                        "type": "array"
+                    },
+                    "totalSent": {
+                        "description": "Total NEBL sent",
+                        "type": "number"
+                    }
+                }
+            },
+            "getTxsResponse": {
+                "type": "object",
+                "properties": {
+                    "pagesTotal": {
+                        "description": "Number of pages of transactions",
+                        "type": "number"
+                    },
+                    "txs": {
+                        "description": "Array of transaction objects",
+                        "type": "array"
+                    }
+                }
+            },
+            "getSyncResponse": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "description": "Whether the withdrawal was successful",
+                        "type": "string"
+                    },
+                    "blockChainHeight": {
+                        "description": "Current blockchain height",
+                        "type": "number"
+                    },
+                    "syncPercentage": {
+                        "description": "Current sync percentage",
+                        "type": "number"
+                    },
+                    "height": {
+                        "description": "Block height",
+                        "type": "number"
+                    },
+                    "error": {
+                        "description": "Recent sync error messages",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "Node type",
+                        "type": "string"
+                    }
+                }
+            },
+            "Error": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "fields": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "burn": {
+                "type": "array"
+            },
+            "from": {
+                "type": "array"
+            },
+            "transfer": {
+                "type": "array"
+            },
+            "multisigOutputs": {
+                "type": "array"
+            },
+            "ntp1OutputIndexes": {
+                "type": "array"
+            },
+            "utxos": {
+                "type": "array"
+            },
+            "transactions": {
+                "type": "array"
+            },
+            "getAddressUtxosResponse": {
+                "type": "object"
+            },
+            "tx": {
+                "type": "array"
+            },
+            "data": {
+                "type": "object"
+            },
+            "getStatusResponse": {
+                "type": "object"
+            },
+            "holders": {
+                "type": "array"
+            },
+            "metadataOfIssuance": {
+                "type": "object"
+            },
+            "metadataOfUtxo": {
+                "type": "object"
+            },
+            "vin": {
+                "type": "array"
+            },
+            "vout": {
+                "type": "array"
+            },
+            "txs": {
+                "type": "array"
+            },
+            "flags": {
+                "type": "object"
+            },
+            "metadata": {
+                "type": "object"
+            },
+            "sendutxo": {
+                "type": "array"
+            },
+            "to": {
+                "type": "array"
+            },
+            "getAddressBalanceResponse": {
+                "type": "object"
+            },
+            "getAddressTotalReceivedResponse": {
+                "type": "object"
+            },
+            "getAddressTotalSentResponse": {
+                "type": "object"
+            },
+            "getAddressUnconfirmedBalanceResponse": {
+                "type": "object"
+            }
+        }
+    }
+}
