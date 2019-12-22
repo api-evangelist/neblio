@@ -9,8 +9,8 @@
         "networks",
         "new"
     ],
-    "created": "2019-12-19",
-    "modified": "2019-12-19",
+    "created": "2019-12-21",
+    "modified": "2019-12-21",
     "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/neblio\/master\/apis.json",
     "specificationVersion": "0.14",
     "apis": [
@@ -24,17 +24,21 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/neblio-rest-api-suite.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/neblio\/master\/neblio-rest-api-suite-openapi.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/neblio-rest-api-suite-openapi.json"
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/neblio-rest-api-suite.json"
                 }
             ]
         }
     ],
     "include": [],
     "x-common": [
+        {
+            "type": "APIs.json",
+            "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/apis.json"
+        },
         {
             "type": "Blog RSS",
             "url": "https:\/\/nebl.io\/feed\/"
