@@ -1,5 +1,5 @@
 {
-    "id": "21609225c18821e144ec27a363b1e2ee",
+    "id": "29dcfdc921bd60e8585e94949c9dec37",
     "name": "Neblio REST API Suite",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "a0feaaeb9e492180260ba3ece11c3006",
+            "id": "5ace6d63ca666dfc063aeecf8706c925",
             "name": "Returns the tokenId representing a token",
             "url": "http:\/\/ntp1node.nebl.io\/\/ntp1\/tokenid\/{tokensymbol}",
             "description": "Translates a token symbol to a tokenId if a token exists with that symbol on the network\n",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "707fb0965b4cdb0c259974fd86eb7ae0",
+            "id": "1807f1d70a3653c4f58610fe3d2fcd60",
             "name": "Broadcasts a signed raw transaction to the network",
             "url": "http:\/\/ntp1node.nebl.io\/\/ntp1\/broadcast",
             "description": "Broadcasts a signed raw transaction to the network. If successful returns the txid of the broadcast trasnaction.\n",
@@ -68,11 +68,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "3fe95500301b04c488772e57ac9c4a82",
+            "id": "626263a61bd1729076d60951b9f05f93",
             "name": "Information On a Neblio Address",
             "url": "http:\/\/ntp1node.nebl.io\/\/ntp1\/addressinfo\/{address}",
             "description": "Returns both NEBL and NTP1 token UTXOs held at the given address.\n",
@@ -99,11 +99,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "152efd92297b2753d824091aeba97d99",
+            "id": "081d2d2aacbd9cedc48d9b666ea15432",
             "name": "Information On an NTP1 Transaction",
             "url": "http:\/\/ntp1node.nebl.io\/\/ntp1\/transactioninfo\/{txid}",
             "description": "Returns detailed information regarding an NTP1 transaction.\n",
@@ -130,11 +130,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "65777511aaeb0d76a65f601bd4dfb4c2",
+            "id": "0daead8c1ff2485f6bce7b434657fa66",
             "name": "Get Issuance Metadata of Token",
             "url": "http:\/\/ntp1node.nebl.io\/\/ntp1\/tokenmetadata\/{tokenid}",
             "description": "Returns the metadata associated with a token at time of issuance.\n",
@@ -161,11 +161,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "87aef2377844a67e72ab020a897d2cd0",
+            "id": "b27ede760628d1c326e6d964928c54bb",
             "name": "Get UTXO Metadata of Token",
             "url": "http:\/\/ntp1node.nebl.io\/\/ntp1\/tokenmetadata\/{tokenid}\/{utxo}",
             "description": "Returns the metadata associated with a token for that specific utxo instead of the issuance transaction.\n",
@@ -199,11 +199,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "84204a741d8a10e249899bd28e7b402f",
+            "id": "a5d2606fb4c0e615863e3ed2c1052343",
             "name": "Get Addresses Holding a Token",
             "url": "http:\/\/ntp1node.nebl.io\/\/ntp1\/stakeholders\/{tokenid}",
             "description": "Returns the the the addresses holding a token and how many tokens are held\n",
@@ -230,11 +230,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "1ce88c11c73b6a8ad47bb987341bed29",
+            "id": "b39afab5f5b0143009f6ac00aa4ee9e2",
             "name": "Builds a transaction that issues a new NTP1 Token",
             "url": "http:\/\/ntp1node.nebl.io\/\/ntp1\/issue",
             "description": "Builds an unsigned raw transaction that issues a new NTP1 token on the Neblio blockchain.\n",
@@ -261,11 +261,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "6c56447f5a65251c7d99eafda0ef4d19",
+            "id": "c726ce035641336094ba3cb6ecb3fa76",
             "name": "Builds a transaction that sends an NTP1 Token",
             "url": "http:\/\/ntp1node.nebl.io\/\/ntp1\/sendtoken",
             "description": "Builds an unsigned raw transaction that sends an NTP1 token on the Neblio blockchain.\n",
@@ -292,11 +292,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "f49b4e1f270cc44928de9239728faf3d",
+            "id": "8ebca7fc20bc3b4f435e83794b59ae54",
             "name": "Builds a transaction that burns an NTP1 Token",
             "url": "http:\/\/ntp1node.nebl.io\/\/ntp1\/burntoken",
             "description": "Builds an unsigned raw transaction that burns an NTP1 token on the Neblio blockchain.\n",
@@ -323,11 +323,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "edd2c4b41a66671d21f7d34b6f26b61b",
+            "id": "79543ddd820a7f6c37819540b9f5d06a",
             "name": "Broadcasts a signed raw transaction to the network (not NTP1 specific)",
             "url": "http:\/\/ntp1node.nebl.io\/\/ins\/tx\/send",
             "description": "Broadcasts a signed raw transaction to the network. If successful returns the txid of the broadcast trasnaction.\n",
@@ -354,11 +354,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "e75ac315c2a7bbdb45f027455032462a",
+            "id": "e0ce49220a93c8b71e2876279613427a",
             "name": "Returns information regarding a Neblio block",
             "url": "http:\/\/ntp1node.nebl.io\/\/ins\/block\/{blockhash}",
             "description": "Returns blockchain data for a given block based upon the block hash",
@@ -385,11 +385,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "fab9b115f5c354ceea9eae0fff0cffbd",
+            "id": "70c6e50d31c9bf36e3c433e75014b988",
             "name": "Returns block hash of block",
             "url": "http:\/\/ntp1node.nebl.io\/\/ins\/block-index\/{blockindex}",
             "description": "Returns the block hash of a block at a given block index",
@@ -416,11 +416,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "9012a3d5f99a1318e40f5bbaac90cc9a",
+            "id": "31bb36d00721c6390d64311cf333a34d",
             "name": "Returns transaction object",
             "url": "http:\/\/ntp1node.nebl.io\/\/ins\/tx\/{txid}",
             "description": "Returns NEBL transaction object representing a NEBL transaction",
@@ -447,11 +447,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "c1ff7eda4727d6249845d5233f815c75",
+            "id": "b039f912e785aee3299268601bbddeda",
             "name": "Returns raw transaction hex",
             "url": "http:\/\/ntp1node.nebl.io\/\/ins\/rawtx\/{txid}",
             "description": "Returns raw transaction hex representing a NEBL transaction",
@@ -478,11 +478,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "33fe813b63927332b5c12d48564d6af4",
+            "id": "b0b99ff01a6693c1245446464e1711ec",
             "name": "Returns address object",
             "url": "http:\/\/ntp1node.nebl.io\/\/ins\/addr\/{address}",
             "description": "Returns NEBL address object containing information on a specific address",
@@ -509,11 +509,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "e67ac13ef88a0b13767dd7709f90fb66",
+            "id": "48a8d09801d62b918ef267a99c905e31",
             "name": "Returns address balance in sats",
             "url": "http:\/\/ntp1node.nebl.io\/\/ins\/addr\/{address}\/balance",
             "description": "Returns NEBL address balance in satoshis",
@@ -540,11 +540,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "4c2261be06615f2cf0a38711c031f3a7",
+            "id": "bc204b426287b424d14c0754dd1a7a45",
             "name": "Returns address unconfirmed balance in sats",
             "url": "http:\/\/ntp1node.nebl.io\/\/ins\/addr\/{address}\/unconfirmedBalance",
             "description": "Returns NEBL address unconfirmed balance in satoshis",
@@ -571,11 +571,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "f5f3d3ac2f3b1b48b0b434b5d536f2ef",
+            "id": "df48c63c702acb53190bebeecc511117",
             "name": "Returns total received by address in sats",
             "url": "http:\/\/ntp1node.nebl.io\/\/ins\/addr\/{address}\/totalReceived",
             "description": "Returns total NEBL received by address in satoshis",
@@ -602,11 +602,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "41a74b09b4b9e405f0459414b764ccb7",
+            "id": "d30922c80efc26fbfe6f04171c4ba41b",
             "name": "Returns all UTXOs at a given address",
             "url": "http:\/\/ntp1node.nebl.io\/\/ins\/addr\/{address}\/utxo",
             "description": "Returns information on each Unspent Transaction Output contained at an address",
@@ -633,11 +633,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "b21b4a2374da9ca6dde8d99385332876",
+            "id": "753fb4b95adf03177d486ead72903afb",
             "name": "Returns total sent by address in sats",
             "url": "http:\/\/ntp1node.nebl.io\/\/ins\/addr\/{address}\/totalSent",
             "description": "Returns total NEBL sent by address in satoshis",
@@ -664,11 +664,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "8a99705b0c1a7ec1bf79da839d41b785",
+            "id": "28fe04fa0f4ab18f427885b91fb27d39",
             "name": "Get transactions by block or address",
             "url": "http:\/\/ntp1node.nebl.io\/\/ins\/txs",
             "description": "Returns all transactions by block or address",
@@ -709,11 +709,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "fdd816e6aa4a2a87616c681ef30129ad",
+            "id": "33218e510cef2e5ada324426bdc83825",
             "name": "Get node sync status",
             "url": "http:\/\/ntp1node.nebl.io\/\/ins\/sync",
             "description": "Returns information on the node's sync progress",
@@ -732,11 +732,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "77c1b7d05d297acb1bea1c0baf22abd9",
+            "id": "f5f32ec6bcfc32eebe619ab9ab7b5add",
             "name": "Utility API for calling several blockchain node functions",
             "url": "http:\/\/ntp1node.nebl.io\/\/ins\/status",
             "description": "Utility API for calling several blockchain node functions - getInfo, getDifficulty, getBestBlockHash, getLastBlockHash",
@@ -763,11 +763,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "38b7696b3d9c7cf873b57b2bcb50ff71",
+            "id": "4033b1917cfdf28d5d72d768effb47f2",
             "name": "Broadcasts a signed raw transaction to the network (not NTP1 specific)",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ins\/tx\/send",
             "description": "Broadcasts a signed raw transaction to the network. If successful returns the txid of the broadcast trasnaction.\n",
@@ -794,11 +794,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "b888aefafcc42a81c399603fa025d3ac",
+            "id": "c2d4553d594699c334358fea6351c567",
             "name": "Returns information regarding a Neblio block",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ins\/block\/{blockhash}",
             "description": "Returns blockchain data for a given block based upon the block hash",
@@ -825,11 +825,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "36d69fc684f8395fe4b477598e4a6849",
+            "id": "6bb764d5c2595a8986fceb58e3ce0f69",
             "name": "Returns block hash of block",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ins\/block-index\/{blockindex}",
             "description": "Returns the block hash of a block at a given block index",
@@ -856,11 +856,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "1872313245dc2b2b13135fab709f941d",
+            "id": "2936df9b28b1405ad378ed4277998bbe",
             "name": "Returns transaction object",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ins\/tx\/{txid}",
             "description": "Returns NEBL transaction object representing a NEBL transaction",
@@ -887,11 +887,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "c7d2ce3943933c3ca60a266c832ed44b",
+            "id": "a4a8f48e524da8733be4d13f34b6fc0d",
             "name": "Returns raw transaction hex",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ins\/rawtx\/{txid}",
             "description": "Returns raw transaction hex representing a NEBL transaction",
@@ -918,11 +918,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "783479f933e4ba230de48b5b3db79eae",
+            "id": "76b4e3f8de694fbb36ecc9ebb1d2d9f7",
             "name": "Returns address object",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ins\/addr\/{address}",
             "description": "Returns NEBL address object containing information on a specific address",
@@ -949,11 +949,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "743d3868723c72a6ae3a41174b326c25",
+            "id": "427d890b33122772e044e9f2e6621229",
             "name": "Returns address balance in sats",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ins\/addr\/{address}\/balance",
             "description": "Returns NEBL address balance in satoshis",
@@ -980,11 +980,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "1d30d50e053d9e0ed897ae626714001e",
+            "id": "3c4a990d84617b4903ad13b9e7fb23be",
             "name": "Returns address unconfirmed balance in sats",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ins\/addr\/{address}\/unconfirmedBalance",
             "description": "Returns NEBL address unconfirmed balance in satoshis",
@@ -1011,11 +1011,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "4debcd51c33079fd70e878d6f901f9a6",
+            "id": "0ba7d104d57baab60e58d6c3227ffd59",
             "name": "Returns total received by address in sats",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ins\/addr\/{address}\/totalReceived",
             "description": "Returns total NEBL received by address in satoshis",
@@ -1042,11 +1042,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "e538dca30830c70a4ac4ec62632da82e",
+            "id": "863f233db14be3de080b53dd42e74fe2",
             "name": "Returns all UTXOs at a given address",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ins\/addr\/{address}\/utxo",
             "description": "Returns information on each Unspent Transaction Output contained at an address",
@@ -1073,11 +1073,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "bf386c4434e9dd94e542bccb6be8dda2",
+            "id": "d8936e27a625463057f87fd9b332415b",
             "name": "Returns total sent by address in sats",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ins\/addr\/{address}\/totalSent",
             "description": "Returns total NEBL sent by address in satoshis",
@@ -1104,11 +1104,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "5047cf205465120aea8963d653901712",
+            "id": "ff41b826c29415add0be52f5e87d9c27",
             "name": "Get transactions by block or address",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ins\/txs",
             "description": "Returns all transactions by block or address",
@@ -1149,11 +1149,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "6f8c3eeff8a9dc63438f1bd929fba91e",
+            "id": "6675d0fe3c9b5f14f6568712732591c2",
             "name": "Get node sync status",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ins\/sync",
             "description": "Returns information on the node's sync progress",
@@ -1172,11 +1172,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "62ca92296b610600f83bc6a96696df32",
+            "id": "2f4e8b9c753070b4e78ffc0b3a4f65cb",
             "name": "Utility API for calling several blockchain node functions",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ins\/status",
             "description": "Utility API for calling several blockchain node functions - getInfo, getDifficulty, getBestBlockHash, getLastBlockHash",
@@ -1203,11 +1203,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "ef9f5c2038f981114e6b0b3a4f4570a3",
+            "id": "026ce0e11c980db0b00def2ad96a9d4f",
             "name": "Returns the tokenId representing a token",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ntp1\/tokenid\/{tokensymbol}",
             "description": "Translates a token symbol to a tokenId if a token exists with that symbol on the network\n",
@@ -1234,11 +1234,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "9bf93421d9046be15d1029a2740124e4",
+            "id": "71a16a9cef85a3efa7fba77bfd026f2b",
             "name": "Broadcasts a signed raw transaction to the network",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ntp1\/broadcast",
             "description": "Broadcasts a signed raw transaction to the network. If successful returns the txid of the broadcast trasnaction.\n",
@@ -1265,11 +1265,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "6d1f525f949cde167e4cc5a3b2503686",
+            "id": "05d2d3fecacfd8544d0b693fe1100fa4",
             "name": "Information On a Neblio Address",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ntp1\/addressinfo\/{address}",
             "description": "Returns both NEBL and NTP1 token UTXOs held at the given address.\n",
@@ -1296,11 +1296,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "e8af2c37e204195d8c6dbe860f5d6e05",
+            "id": "72c2ad6009e2da232441d382db63a06b",
             "name": "Information On an NTP1 Transaction",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ntp1\/transactioninfo\/{txid}",
             "description": "Returns detailed information regarding an NTP1 transaction.\n",
@@ -1327,11 +1327,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "4ce624f725a27ddb1ff9183e2f7ed456",
+            "id": "943ce7158c3bfbd8ba6fcf23ac755355",
             "name": "Get Issuance Metadata of Token",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ntp1\/tokenmetadata\/{tokenid}",
             "description": "Returns the metadata associated with a token at time of issuance.\n",
@@ -1358,11 +1358,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "3b339c54b513fe1ed157171459fd0487",
+            "id": "c93af9d52bfca6218c3d489e62a32829",
             "name": "Get UTXO Metadata of Token",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ntp1\/tokenmetadata\/{tokenid}\/{utxo}",
             "description": "Returns the metadata associated with a token for that specific utxo instead of the issuance transaction.\n",
@@ -1396,11 +1396,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "1ea54ec627060b7744670cb476c4cb47",
+            "id": "117285facbbdf48f7598fa46e97deeb3",
             "name": "Get Addresses Holding a Token",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ntp1\/stakeholders\/{tokenid}",
             "description": "Returns the the the addresses holding a token and how many tokens are held\n",
@@ -1427,11 +1427,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "01eca314023d41dea435e578d1a55259",
+            "id": "c097196c2eadf756a763b406ea967096",
             "name": "Builds a transaction that issues a new NTP1 Token",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ntp1\/issue",
             "description": "Builds an unsigned raw transaction that issues a new NTP1 token on the Neblio blockchain.\n",
@@ -1458,11 +1458,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "570a40233e28be46241ece424cb0ac43",
+            "id": "404f5657bf65f9ddc20b64e19bfb8b8b",
             "name": "Builds a transaction that sends an NTP1 Token",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ntp1\/sendtoken",
             "description": "Builds an unsigned raw transaction that sends an NTP1 token on the Neblio blockchain.\n",
@@ -1489,11 +1489,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "4f5e9cfa15b34bcd9e5c2e4787bf8b3f",
+            "id": "266c5a60decf67f9e29b0c8b38f01d63",
             "name": "Builds a transaction that burns an NTP1 Token",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/ntp1\/burntoken",
             "description": "Builds an unsigned raw transaction that burns an NTP1 token on the Neblio blockchain.\n",
@@ -1520,11 +1520,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         },
         {
-            "id": "c9906850bf8025a738e246699b223db4",
+            "id": "1fdce0f0807ab9d091ee6c4ff5bd21fc",
             "name": "Withdraws testnet NEBL to the specified address",
             "url": "http:\/\/ntp1node.nebl.io\/\/testnet\/faucet",
             "description": "Withdraw testnet NEBL to your Neblio Testnet address. By default amount is 1500000000 or 15 NEBL and has a max of 50 NEBL. Only 2 withdrawals allowed per 24 hour period.\n",
@@ -1558,7 +1558,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "21609225c18821e144ec27a363b1e2ee",
+            "collectionId": "29dcfdc921bd60e8585e94949c9dec37",
             "rawModeData": ""
         }
     ]
